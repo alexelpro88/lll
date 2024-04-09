@@ -1,29 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar sesión </title>
+    <title>Iniciar sesión en Instagram</title>
     <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    
-</head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
+        .container {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #fffafa;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .logo img {
+            max-width: 25%;
+            height: auto;
+        }
+
+        .form-group {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="password"] {
+            width: calc(100% - 35px);
+            padding: 8px 10px 8px 35px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            background-image: none;
+        }
+
+        .icon {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            color: #999;
+        }
+
+        .centro {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .centro hr {
+            display: inline-block;
+            width: 40%;
+            vertical-align: middle;
+            border: 1px solid #ccc;
+            margin: 0 10px;
+        }
+
+        .centro span {
+            background-color: #f9f9f9;
+            padding: 0 10px;
+            font-weight: bold;
+        }
+
+        .g-recaptcha {
+            margin: 10px auto;
+        }
+    </style>
+</head>
 <body>
     <div class="container">
         <div class="logo">
-            <img src="logo.png" alt="Logo de Instagram">
+            <img src="logo.png" alt="Logo de la pagina">
         </div>
         <h2>Crea tu cuenta</h2>
-        <h6>Una suscripcion para Scribd,Everand y SlideShare</h6>
+        <h6>Una suscripción para Scribd, Everand y SlideShare</h6>
         <form action="tu_script_de_procesamiento.php" method="post">
             <div class="form-group">
-            
-                <input type="text" id="username" name="username" placeholder="Continuar con Google">
-                <label for="password"></label>
-                <input type="text" id="username" name="username" placeholder="Continuar con Aplee">
+                <i class="fab fa-google icon"></i> 
+                <input type="text" id="google_username" name="google_username" placeholder="Continuar con Google">
+            </div>
+                
+            <div class="form-group">           
+                <i class="fab fa-apple icon"></i>
+                <input type="text" id="apple_username" name="apple_username" placeholder="Continuar con Apple">
             </div>
             <div class="centro">
                 <hr>
@@ -31,8 +102,9 @@
                 <hr>
             </div>
             <div class="form-group">
-                <input type="text" id="username" name="username" placeholder="Correo electronico">
-                <label for="password"></label>
+                <input type="text" id="email" name="email" placeholder="Correo electrónico">
+            </div>
+            <div class="form-group">
                 <input type="password" id="password" name="password" placeholder="Contraseña">
             </div>
 
@@ -46,7 +118,5 @@
         </form>
         
     </div>
-    
 </body>
-
 </html>
